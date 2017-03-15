@@ -2,11 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>React Seed</title>
+    <title>Superagent Test</title>
   </head>
   <body>
-    <div id="root"></div>
     <script src="/vendor.bundle.js"></script>
     <script src="/js.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min.js"></script>
+    <script>
+      superagent
+        .get('https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL')
+        .end(function(err,res){
+        console.log(res)
+      })
+    </script>
+
+    <p>Check your console</p>
   </body>
 </html>
